@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/black"
+
+    tools:context=".login.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/image_logo"
+
+        android:layout_width="282dp"
+        android:layout_height="384dp"
+        android:contentDescription="@string/image_content_description"
+        android:src="@drawable/print__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/splash_brand_tagline"
+        android:textAllCaps="true"
+        android:textColor="@color/text_high_contrast"
+        android:textSize="@dimen/_22ssp"
+        app:layout_constraintBottom_toTopOf="@+id/text_app_info"
+        app:layout_constraintEnd_toEndOf="@+id/image_logo"
+        app:layout_constraintStart_toStartOf="@+id/image_logo"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
+
+    <TextView
+        android:id="@+id/text_app_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:text="@string/splash_app_info"
+        android:textColor="@color/text_low_contrast"
+        android:textSize="@dimen/_14ssp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

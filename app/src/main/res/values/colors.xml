@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Dark theme colors  -->
+    <color name="primary">#191822</color>
+    <color name="secondary">#21202d</color>
+    <color name="textHighContrast">#FFFFFF</color>
+    <color name="textLowContrast">#ADB4D2</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="black_transparent">#01000000</color>
+    <!--  Other colors  -->
+    <color name="btn_disabled">#969697</color>
+
+    <color name="black">#191822</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#F6F5F6</color>
+    <color name="orange">#FB8500</color>
+    <color name="orangeLight">#50FB8500</color>
+    <color name="orangeLightest">#10FB8500</color>
+    <color name="green">#71BE34</color>
+    <color name="greenLight">#5071BE34</color>
+    <color name="greenLightest">#1071BE34</color>
+    <color name="red">#FF2200</color>
+    <color name="redLightest">#10FF2200</color>
+    <color name="yellow">#FEC236</color>
+    <color name="yellowLightest">#10FEC236</color>
+    <color name="text_high_contrast">#30334F</color>
+    <color name="text_low_contrast">#9595BA</color>
+    <color name="violet">#8383CE</color>
+    <color name="violetLightest">#108383CE</color>
+    <color name="teal">#5CBBA0</color>
+    <color name="tealLightest">#105CBBA0</color>
+</resources>

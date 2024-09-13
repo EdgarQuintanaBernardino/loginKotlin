@@ -1,0 +1,305 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.quics.login.fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_menu_icon"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:cardBackgroundColor="@color/secondary"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/text_greeting"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_menu_icon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:contentDescription="@string/image_content_description"
+                android:src="@drawable/ic_menu_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/card_menu_icon"
+                app:layout_constraintEnd_toEndOf="@+id/card_menu_icon"
+                app:layout_constraintStart_toStartOf="@+id/card_menu_icon"
+                app:layout_constraintTop_toTopOf="@+id/card_menu_icon" />
+
+            <TextView
+                android:id="@+id/text_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_greeting"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_menu_icon"
+                app:layout_constraintEnd_toStartOf="@+id/card_customer_image"
+                app:layout_constraintStart_toEndOf="@+id/card_menu_icon"
+                app:layout_constraintTop_toTopOf="@+id/card_menu_icon" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_customer_image"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:cardBackgroundColor="@color/secondary"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_greeting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_greeting"
+                app:layout_constraintTop_toTopOf="@+id/text_greeting" />
+
+            <ImageView
+                android:id="@+id/image_customer"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/image_content_description"
+                android:src="@drawable/ic_person"
+                app:layout_constraintBottom_toBottomOf="@+id/card_customer_image"
+                app:layout_constraintEnd_toEndOf="@+id/card_customer_image"
+                app:layout_constraintStart_toStartOf="@+id/card_customer_image" />
+
+            <EditText
+                android:id="@+id/edit_text_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:autofillHints=""
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/open_sans_medium"
+                android:hint="@string/home_search_here_hint"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:textColor="@color/textHighContrast"
+                android:textColorHint="@color/text_low_contrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_greeting" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_search_icon"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                app:cardBackgroundColor="@color/orange"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_text_search"
+                app:layout_constraintEnd_toEndOf="@+id/edit_text_search"
+                app:layout_constraintTop_toTopOf="@+id/edit_text_search" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:contentDescription="@string/image_content_description"
+                android:src="@drawable/ic_search_white"
+                app:layout_constraintBottom_toBottomOf="@id/card_search_icon"
+                app:layout_constraintEnd_toEndOf="@id/card_search_icon"
+                app:layout_constraintStart_toStartOf="@+id/card_search_icon"
+                app:layout_constraintTop_toTopOf="@+id/card_search_icon" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_125sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_search" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_pager_2"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+            <TextView
+                android:id="@+id/text_categories_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_categories_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="@+id/tab_layout"
+                app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+
+            <TextView
+                android:id="@+id/text_categories_see_all_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_see_all_label"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_categories_label"
+                app:layout_constraintEnd_toEndOf="@+id/tab_layout"
+                app:layout_constraintTop_toTopOf="@+id/text_categories_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_categories_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_categories_label" />
+
+            <TextView
+                android:id="@+id/text_most_popular_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_most_popular_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_categories" />
+
+            <TextView
+                android:id="@+id/text_most_popular_see_all_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_see_all_label"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_most_popular_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_most_popular_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_most_popular_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_most_popular_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_most_popular_label" />
+
+            <TextView
+                android:id="@+id/text_scratch_win_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_scratch_win_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_most_popular_products" />
+
+            <ImageView
+                android:id="@+id/image_scratch_win"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_125sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/placeholder_667_293"
+                app:layout_constraintStart_toStartOf="@+id/text_scratch_win_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_scratch_win_label"
+                android:contentDescription="@string/image_content_description"/>
+
+            <TextView
+                android:id="@+id/text_recently_viewed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_recently_viewed_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_scratch_win" />
+
+            <TextView
+                android:id="@+id/text_recently_viewed_see_all_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_see_all_label"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_recently_viewed_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_recently_viewed_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_recently_viewed_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_recently_viewed_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_recently_viewed_label" />
+
+            <TextView
+                android:id="@+id/text_best_restaurants_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:text="@string/home_best_restaurants_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_recently_viewed_products" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_best_restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_best_restaurants_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_best_restaurants_label" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

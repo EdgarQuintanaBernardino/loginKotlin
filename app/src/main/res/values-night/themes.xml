@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Login" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/orange</item>
+    </style>
+    <style name="HomeDrawerNavMenuShapeAppearanceOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+    <style name="HomeDrawerNavMenuTextAppearance" parent="">
+        <item name="android:fontFamily">@font/open_sans_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+</resources>

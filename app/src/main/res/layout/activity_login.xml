@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+
+    tools:context=".login.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/rootActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_19sdp">
+
+            <TextView
+                android:id="@+id/text_screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/login_screen_heading"
+                android:textAlignment="center"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_screen_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/open_sans_medium"
+                android:text="@string/login_screen_info"
+                android:textColor="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/text_screen_title"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/text_screen_title"
+                app:layout_constraintTop_toBottomOf="@+id/text_screen_title" />
+
+            <TextView
+                android:id="@+id/text_email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/open_sans_medium"
+                android:text="@string/login_email_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_screen_info" />
+
+            <EditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_message_orange"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_medium"
+                android:hint="@string/login_email_hint"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:textColor="@color/textHighContrast"
+                android:textColorHint="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/text_email_label"
+                app:layout_constraintStart_toStartOf="@+id/text_email_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_email_label" />
+
+            <TextView
+                android:id="@+id/validation_email"
+                android:layout_width="373dp"
+                android:layout_height="19dp"
+
+                android:textColor="@color/red"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@+id/text_password_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.021"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_email"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/text_password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/open_sans_medium"
+                android:text="@string/login_password_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/validation_email" />
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autofillHints="password"
+
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_lock_orange"
+                android:drawableEnd="@drawable/ic_eye_open_orange"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_medium"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:textColor="@color/textHighContrast"
+                android:textColorHint="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/text_password_label"
+                app:layout_constraintStart_toStartOf="@id/text_password_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_password_label" />
+
+            <TextView
+                android:id="@+id/validation_password"
+                android:layout_width="372dp"
+                android:layout_height="28dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/open_sans_medium"
+                android:text="@string/login_remember_me_label"
+                android:textColor="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="normal"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/validation_password" />
+
+            <TextView
+                android:id="@+id/text_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/login_question_one"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+
+                android:padding="@dimen/_9sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/checkbox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/checkbox" />
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/btn_disabled"
+                android:fontFamily="@font/open_sans_regular"
+                android:onClick="fnLogin"
+                android:text="@string/login_button_label"
+                android:enabled="false"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@id/text_forgot_password"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+            <View
+                android:id="@+id/view_divider_left"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/bg_divider_or_left"
+                app:layout_constraintBottom_toBottomOf="@+id/or"
+                app:layout_constraintEnd_toEndOf="@+id/or"
+                app:layout_constraintStart_toStartOf="@+id/button_submit"
+                app:layout_constraintTop_toTopOf="@+id/or" />
+
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/open_sans_medium"
+                android:text="@string/login_or_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
+
+            <View
+                android:id="@+id/view_divider_right"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/bg_divider_or_right"
+                app:layout_constraintBottom_toBottomOf="@+id/or"
+                app:layout_constraintEnd_toEndOf="@+id/button_submit"
+                app:layout_constraintStart_toStartOf="@+id/or"
+                app:layout_constraintTop_toTopOf="@+id/or" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:contentDescription="@string/login_facebook_label"
+                app:layout_constraintEnd_toStartOf="@+id/google"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/view_divider_left"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider_left"
+                app:srcCompat="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:onClick="fnLoginGoogle"
+
+                android:contentDescription="@string/login_twitter_label"
+                app:layout_constraintBottom_toBottomOf="@+id/facebook"
+                app:layout_constraintEnd_toEndOf="@+id/view_divider_right"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/facebook"
+                app:layout_constraintTop_toTopOf="@+id/facebook"
+                app:srcCompat="@drawable/google" />
+
+
+
+            <TextView
+                android:id="@+id/text_footer_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/login_question_two"
+                android:textColor="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+
+                app:layout_constraintEnd_toStartOf="@+id/text_create_here"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/view_divider_left"
+                app:layout_constraintTop_toBottomOf="@+id/facebook" />
+
+            <TextView
+                android:id="@+id/text_create_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/login_create_here_label"
+
+                android:padding="@dimen/_5ssp"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_footer_question"
+                app:layout_constraintEnd_toEndOf="@id/view_divider_right"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_footer_question"
+                app:layout_constraintTop_toTopOf="@+id/text_footer_question" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

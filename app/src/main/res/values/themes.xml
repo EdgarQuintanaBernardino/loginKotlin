@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Login" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/orange</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+
+    </style>
+
+    <style name="Theme.Login" parent="Base.Theme.Login" />
+    <style name="roundedRestaurantImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_20sdp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="roundedHeaderImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_20sdp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="roundedRecentTransactionImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_7sdp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="SpecificCornerCut">
+        <item name="cornerSizeBottomRight">@dimen/_20sdp</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/_20sdp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+
+    <style name="HomeDrawerNavMenuShapeAppearanceOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="HomeDrawerNavMenuTextAppearance" parent="">
+        <item name="android:fontFamily">@font/open_sans_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+</resources>

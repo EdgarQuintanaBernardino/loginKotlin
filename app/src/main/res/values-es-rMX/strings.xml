@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="googleWebClientId">175249615113-1v7thmia8af3t4s6v6sd6uhhr7bv3bvi.apps.googleusercontent.com</string>
+
+    <string name="app_name">Quics App</string>
+    <string name="home_drawer_close">cerrar</string>
+    <string name="home_greeting">Hola</string>
+    <string name="home_categories_label">Categorias</string>
+    <string name="login_screen_info">Ingresa las credenciales de tu cuenta para iniciar sesión.</string>
+    <string name="login_email_hint">Ingresa tu correo electrónico</string>
+    <string name="login_password_label">Contraseña</string>
+    <string name="login_password_hint">Ingresa tu contraseña</string>
+    <string name="login_question_one">¿Olvidaste tu contraseña?</string>
+    <string name="login_button_label">Inicia Sesión</string>
+    <string name="login_or_label">O</string>
+    <string name="login_question_two">¿Aún no tienes cuenta?</string>
+    <string name="login_create_here_label">Crear cuenta</string>
+    <string name="register_screen_heading">Registrate</string>
+    <string name="register_screen_info">Para dar de alta tu cuenta necesitamos solo algunos datos.</string>
+    <string name="register_name_label">Nombre</string>
+    <string name="register_name_hint">Ingresa tu nombre completo</string>
+    <string name="register_email_label">Correo Electrónico</string>
+    <string name="register_email_hint">Ingresa tu correo electrónico</string>
+    <string name="register_phone_label">Teléfono</string>
+    <string name="register_phone_hint">Ingresa número teléfonico</string>
+    <string name="register_log_me_in_label">Iniciar Sesion</string>
+    <string name="register_button_label">Quiero Registrarme</string>
+    <string name="register_question_bottom">¿Tienes una cuenta?</string>
+    <string name="register_login_here_label">Iniciar sesión</string>
+    <string name="splash_app_info">Admin Negocios</string>
+    <string name="msg_error_email_empty">campo email vacío</string>
+    <string name="msg_error_password_empty">campo contraseña vacío</string>
+    <string name="msg_error_email_invalid">campo email inválido</string>
+    <string name="show_user_response_invalid_login">"email y/o contraseña inválido "</string>
+    <string name="register_name_business">Ingresa el nombre de tu negocio</string>
+    <string name="label_register_name_business">Nombre del Negocio</string>
+    <string name="msg_email_duplicated">email activo</string>
+    <string name="acepted_terminos">He leído y comprendido los</string>
+    <string name="terminos_uso">Al registrarte a nuestra aplicación, aceptas los Términos de Uso y Política de privacidad</string>
+    <string name="email_send_reset">email enviado correctamente</string>
+    <string name="send_email_reset_password_fail">email no registrado</string>
+    <string name="my_profile_exit">Cerrar Sesión</string>
+    <string name="email_valid_sucess">correo electrónico correcto</string>
+    <string name="password_valid">¡Listo!</string>
+    <string name="login_loader">Validando su información</string>
+    <string name="reset_password_loader">Verificando cuenta</string>
+    <string name="register_bussines_loader">Creando cuenta</string>
+    <string name="login_password_label_confirm">Confirmar Contraseña</string>
+    <string name="register_password_hint_confirm">Repite Contraseña</string>
+    <string name="validate_form_min">"El mínimo de caracteres es de "</string>
+    <string name="validate_form_max">"El máximo de caracteres es de "</string>
+    <string name="validate_form_required">El campo es requerido</string>
+    <string name="error_login_google">Error al iniciar sesión con Google</string>
+    <string name="inputsEquals">La contraseña coincide</string>
+    <string name="inputsNoEquals">Las contraseñas son diferentes</string>
+    <string name="terms_conditions">Terminos y Condiciones</string>
+    <string name="terms_conditions_short">"Terminos y condiciones texto informativo aqui "</string>
+    <string name="data_privacy">Datos Privados y Politicas</string>
+    <string name="data_privacy_short">"La protección de los datos del usuario deben de ir a qui "</string>
+    <string name="cancel_returns">Cancelaciones y Devoluciones</string>
+    <string name="cancel_return_short">Politica de cancelación y reembolsos</string>
+    <string name="email_help">Correo de Ayuda y Preguntas Frecuentes</string>
+    <string name="email_help_short">Contacto de Ayuda y preguntas frecuentes aqui</string>
+
+</resources>

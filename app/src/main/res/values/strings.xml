@@ -1,0 +1,524 @@
+<resources>
+    <!--  App name & brand slogan  -->
+    <string name="app_name">Quics App</string>
+    <string name="brand_slogan">World of tasty food!</string>
+
+    <!--  Home screen string values  -->
+    <string name="home_drawer_open">open</string>
+    <string name="home_drawer_close">close</string>
+    <string name="home_greeting">Hi,Elizabeth!</string>
+    <string name="home_search_here_hint">Search here&#8230;</string>
+    <string name="home_categories_label">Categories</string>
+    <string name="home_most_popular_label">Most popular</string>
+    <string name="home_offer_label">Today\'s offer</string>
+    <string name="home_recently_viewed_label">Recently viewed</string>
+    <string name="home_scratch_win_label">Scratch &amp; win</string>
+    <string name="home_see_all_label">See all</string>
+    <string name="home_best_restaurants_label">Best restaurants</string>
+    <string name="home_best_restaurant_distance">30 minutes</string>
+    <string name="home_best_restaurant_name">Eats Meets West</string>
+    <string name="home_best_restaurant_rating">5</string>
+    <string name="home_best_restaurant_rating_count">(25)</string>
+    <string name="home_best_restaurant_price_range_label">Price range:</string>
+    <string name="home_best_restaurant_price_range">$10.00 &#8211; 59.99</string>
+
+    <!--  Login screen string values  -->
+    <string name="login_screen_toolbar_title">Login</string>
+    <string name="login_screen_heading">Login</string>
+    <string name="login_screen_info">Hey, Enter your account credentials too get log in to your account.</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_hint">Enter your email address</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_password_hint">Enter your password</string>
+    <string name="login_remember_me_label">Remember me</string>
+    <string name="login_question_one">Forgot password?</string>
+    <string name="login_button_label">Login</string>
+    <string name="login_or_label">Or</string>
+    <string name="login_facebook_label">Facebook</string>
+    <string name="login_twitter_label">Twitter</string>
+    <string name="login_dribble_label">Dribble</string>
+    <string name="login_question_two">Don\'t have an account?</string>
+    <string name="login_create_here_label">Create here</string>
+
+    <!--  Register screen string values  -->
+    <string name="register_screen_toolbar_title">Register</string>
+    <string name="register_screen_heading">Register</string>
+    <string name="register_screen_info">Hey, Enter your details to create a brand new customer account.</string>
+    <string name="register_name_label">Name</string>
+    <string name="register_name_hint">Enter your name</string>
+    <string name="register_email_label">Email</string>
+    <string name="register_email_hint">Enter your email address</string>
+    <string name="register_phone_label">Phone</string>
+    <string name="register_phone_hint">Enter your phone number</string>
+    <string name="register_log_me_in_label">Log me in</string>
+    <string name="register_button_label">Register</string>
+    <string name="register_question_bottom">Already have an account?</string>
+    <string name="register_login_here_label">Login here</string>
+
+    <!--  Change password screen string values  -->
+    <string name="change_password_toolbar_title">Change password</string>
+    <string name="change_password_heading">Change password</string>
+    <string name="change_password_info">Hey, Change your password to secure your account.</string>
+    <string name="change_password_current_password_label">Current Password</string>
+    <string name="change_password_current_password_hint">Enter your current password</string>
+    <string name="change_password_new_password_label">New Password</string>
+    <string name="change_password_new_password_hint">Enter your new password</string>
+    <string name="change_password_confirm_new_password_label">Confirm New Password</string>
+    <string name="change_password_confirm_new_password_hint">Confirm your new password</string>
+    <string name="change_password_button_label">Change Password</string>
+
+    <!--  No internet screen string values  -->
+    <string name="no_internet_toolbar_title">No Internet</string>
+    <string name="no_internet_label">No Internet!</string>
+    <string name="no_internet_info">Seems, you have no internet connection.\nPlease check your Wi-Fi settings.</string>
+
+    <!--  No data screen string values  -->
+    <string name="no_data_toolbar_title">No Data</string>
+    <string name="no_data_label">No Data!</string>
+    <string name="no_data_info">Seems, there is no data found for this screen.\nPlease be patient.</string>
+
+    <!--  No notifications screen string values  -->
+    <string name="no_notifications_toolbar_title">No Notifications</string>
+    <string name="no_notifications_label">No Notifications!</string>
+    <string name="no_notifications_info">Seems, there are no notifications available.\nPlease be patient.</string>
+
+    <!--  Page not found screen string values  -->
+    <string name="page_not_found_toolbar_title">404 Page Not Found</string>
+    <string name="page_not_found_label">Page Not Found!</string>
+    <string name="page_not_found_info">Seems, the page you are looking for\ndoes not exist.</string>
+
+    <!--  My profile screen string values  -->
+    <string name="my_profile_toolbar_title">My Profile</string>
+    <string name="my_profile_full_name">Jonathan Doe</string>
+    <string name="my_profile_email">jonathan@yahoo.com</string>
+    <string name="my_profile_edit_profile_label">Edit Profile</string>
+    <string name="my_profile_app_settings_label">Settings</string>
+    <string name="my_profile_my_orders_label">My Orders</string>
+    <string name="my_profile_my_wishlist_label">My Wishlist</string>
+    <string name="my_profile_my_wallet_label">My Wallet</string>
+    <string name="my_profile_change_language_label">Change Language</string>
+    <string name="my_profile_coupons_label">Coupons</string>
+
+    <!--  Settings screen string values  -->
+    <string name="settings_toolbar_title">Settings</string>
+    <string name="settings_account_label">Account</string>
+    <string name="settings_edit_profile_label">Edit Profile</string>
+    <string name="settings_change_password_label">Change Password</string>
+    <string name="settings_messaging_label">Messaging</string>
+    <string name="settings_notification_settings_label">Notification Settings</string>
+    <string name="settings_email_label">Email</string>
+    <string name="settings_sms_and_alert_label">SMS &amp; Alert</string>
+    <string name="settings_appearance_label">Appearance</string>
+    <string name="settings_change_theme_label">Change Theme</string>
+    <string name="settings_other_label">Other</string>
+    <string name="settings_change_language_label">Change Language</string>
+    <string name="settings_currency_label">Currency</string>
+    <string name="settings_choose_theme_label">Choose Theme</string>
+
+    <!--  My Wallet screen string values  -->
+    <string name="my_wallet_toolbar_title">My Wallet</string>
+    <string name="my_wallet_label">My Wallet</string>
+    <string name="my_wallet_your_current_balance_label">Your Current Balance</string>
+    <string name="my_wallet_add_balance_label">Add Balance</string>
+    <string name="my_wallet_current_balance_large">$1750</string>
+    <string name="my_wallet_current_balance_small">.75</string>
+    <string name="my_wallet_send_label">Send</string>
+    <string name="my_wallet_receive_label">Receive</string>
+    <string name="my_wallet_shop_label">Shop</string>
+    <string name="my_wallet_swap_label">Swap</string>
+    <string name="my_wallet_recent_transactions_label">Recent Transactions</string>
+
+    <!--  Policy screen string values  -->
+    <string name="policy_toolbar_title">Policy Details</string>
+    <string name="policy_last_update_date">Last updated on February 10, 2023</string>
+    <string name="policy_point_1">Policy details</string>
+    <string name="policy_point_1_details">We value the trust you place in us and recognize the importance of secure transactions and information privacy. This Privacy Policy describes how quics Furniture Internet Private Limited and its affiliates (collectively quics, we, our, us”) collect, use, share or otherwise process your personal information through quics Furniture website www.quics.com, its mobile application, and m-site (hereinafter referred to as the “Platform”).\n\nWhile you may be able to browse certain sections of the Platform without registering with us, however, please note we do not offer any product/service under this Platform outside India. By visiting this Platform, providing your information or availing out product/service, you expressly agree to be bound by the terms and conditions of this Privacy Policy, the Terms of Use and the applicable service/product terms and conditions, and agree to be governed by the laws of India including but not limited to the laws applicable to data protection and privacy. If you do not agree please do not use or access our Platform.</string>
+    <string name="policy_point_2">Collection of Your Information</string>
+    <string name="policy_point_2_details">When you use our Platform, we collect and store your information which is provided by you from time to time. In general, you can browse the Platform without telling us who you are or revealing any personal information about yourself. Once you give us your personal information, you are not anonymous to us. Where possible, we indicate which fields are required and which fields are optional. You always have the option to not provide information by choosing not to use a particular service, product or feature on the Platform.\n\nWe may track your buying behaviour, preferences, and other information that you choose to provide on our Platform. We use this information to do internal research on our users\' demographics, interests, and behaviour to better understand, protect and serve our users. This information is compiled and analysed on an aggregated basis. This information may include the URL that you just came from (whether this URL is on our Platform or not), which URL you next go to (whether this URL is on our Platform or not), your computer browser information, and your IP address.</string>
+
+    <!--  List view products screen string values  -->
+    <string name="list_view_products_toolbar_title">List View Products</string>
+
+    <!--  List view products item layout string values  -->
+    <string name="item_list_view_product_title">Chicken hamburger with chicken</string>
+    <string name="item_list_view_product_rating">5.0 out of 5</string>
+    <string name="item_list_view_product_rating_count">(31)</string>
+    <string name="item_list_view_product_original_price">$12.00</string>
+    <string name="item_list_view_product_selling_price">$10.00</string>
+
+    <!--  Notifications screen string values  -->
+    <string name="notifications_toolbar_title">Notifications</string>
+
+    <!--  Notifications item layout string values  -->
+    <string name="item_notification_title">Order delivered!</string>
+    <string name="item_notification_age">2 minutes ago</string>
+    <string name="item_notification_message">Hi, your order containing veg burger has been\ndelivered a few minutes ago by one of our.</string>
+
+    <!--  Languages screen string values  -->
+    <string name="languages_toolbar_title">Change Language</string>
+
+    <!--  Languages item layout string values  -->
+    <string name="item_language_title">English</string>
+
+    <!--  Recent transactions item layout string values  -->
+    <string name="item_recent_transactions_title">Netflix</string>
+    <string name="item_recent_transactions_date">31 Jan, 2023</string>
+    <string name="item_recent_transactions_amount">-13.75</string>
+    <string name="item_recent_transactions_type">Subscription</string>
+
+    <!--  Grid view products screen string values  -->
+    <string name="grid_view_products_toolbar_title">Grid View Products</string>
+
+    <!--  Grid view products item layout string values  -->
+    <string name="item_grid_view_product_title">Chicken\nhamburger with chicken</string>
+    <string name="item_grid_view_product_rating">5.0</string>
+    <string name="item_grid_view_product_rating_count">(31)</string>
+    <string name="item_grid_view_product_original_price">$12.00</string>
+    <string name="item_grid_view_product_selling_price">$10.00</string>
+
+    <!--  Wishlist screen string values  -->
+    <string name="wishlist_toolbar_title">My Wishlist</string>
+
+    <!--  Wishlist item layout string values  -->
+    <string name="item_wishlist_product_title">Chicken\nhamburger with chicken</string>
+    <string name="item_wishlist_product_rating">5.0 out of 5</string>
+    <string name="item_wishlist_product_rating_count">(31)</string>
+    <string name="item_wishlist_product_original_price">$12.00</string>
+    <string name="item_wishlist_product_selling_price">$10.00</string>
+
+    <!--  Categories screen string values  -->
+    <string name="categories_toolbar_title">All Categories</string>
+
+    <!--  Categories item layout string values  -->
+    <string name="item_category_title">Burger</string>
+
+    <!--  Orders screen string values  -->
+    <string name="orders_toolbar_title">My Orders</string>
+
+    <!--  Orders item layout string values  -->
+    <string name="item_order_id">ORD#647388</string>
+    <string name="item_order_date">15&#8211;02&#8211;2023</string>
+    <string name="item_order_tracking_no_label">Tracking No.</string>
+    <string name="item_order_tracking_number">TRN#748854</string>
+    <string name="item_order_quantity_label">Items Quantity</string>
+    <string name="item_order_quantity">3 Items</string>
+    <string name="item_order_total_label">Order Total</string>
+    <string name="item_order_total_amount">$177.00</string>
+    <string name="item_order_status">Packing</string>
+    <string name="item_order_invoice_label">Invoice</string>
+
+    <!--  Order screen string values  -->
+    <string name="order_toolbar_title">Order Details</string>
+    <string name="order_total_label">Order total</string>
+    <string name="order_subtotal_label">Subtotal</string>
+    <string name="order_subtotal_amount">$199.99</string>
+    <string name="order_shipping_cost_label">Shipping cost</string>
+    <string name="order_shipping_cost_amount">$11.01</string>
+    <string name="order_gst_label">GST @ 0.00%</string>
+    <string name="order_gst_amount">$0.00</string>
+    <string name="order_payment_mode_label">Payment mode</string>
+    <string name="order_payment_mode">Credit card</string>
+    <string name="order_shipping_information_label">Shipping information</string>
+    <string name="order_customer_label">Customer</string>
+    <string name="order_customer_name">Jonathan Doe</string>
+    <string name="order_tax_label">GST @ 0.00%</string>
+    <string name="order_tax_amount">$0.00</string>
+    <string name="order_delivery_mode_label">Delivery mode</string>
+    <string name="order_delivery_mode">Express</string>
+    <string name="order_contact_number_label">Contact number</string>
+    <string name="order_contact_number">+91 0005728000</string>
+    <string name="order_total_payable_label">Total payable</string>
+    <string name="order_total_payable_amount">$217.00</string>
+    <string name="order_status_label">Order status</string>
+
+    <!--  Chats screen string values  -->
+    <string name="chats_toolbar_title">My Chats</string>
+    <string name="chats_message_input_hint">Type your message</string>
+
+    <!--  Chat item left layout string values  -->
+    <string name="item_chat_left_message">Hello, dear Jonathan how are you?</string>
+    <string name="item_chat_left_timing">10:15:23 AM, Toady</string>
+
+    <!--  Chat item right layout string values  -->
+    <string name="item_chat_right_message">Hi smith, I\'m fine thanks man!</string>
+    <string name="item_chat_right_timing">10:16:30 AM, Toady</string>
+
+    <!--  Cart screen string values  -->
+    <string name="cart_toolbar_title">My Cart</string>
+    <string name="cart_continue_shopping_label">Continue shopping</string>
+    <string name="cart_total_label">Cart Total -</string>
+    <string name="cart_total_amount">$46.00</string>
+    <string name="cart_checkout_label">Checkout</string>
+
+    <!--  Cart item layout string values  -->
+    <string name="item_cart_product_title">Chicken hamburger with chicken</string>
+    <string name="item_cart_pure_veg_label">Pure veg</string>
+    <string name="item_cart_quantity">1</string>
+    <string name="item_cart_product_selling_price">$10.00</string>
+
+    <!-- Checkout screen string values -->
+    <string name="checkout_toolbar_title">Checkout</string>
+    <array name="checkout_steps_array">
+        <item>Shipping</item>
+        <item>Payment</item>
+        <item>Done</item>
+    </array>
+    <string name="checkout_prev_label">Back</string>
+    <string name="checkout_next_label">Next</string>
+    <string name="checkout_order_placed">Order Placed!</string>
+    <string name="checkout_order_placed_info">Congratulations, your order has been placed successfully. Track your order.</string>
+
+    <!--  Checkout recycler view header layout string values  -->
+    <string name="add_new_address">Add New Address</string>
+    <string name="add_new_payment_method">Add New Payment Method</string>
+
+    <!--  Shipping addresses item layout string values  -->
+    <string name="item_shipping_address_type">Office</string>
+    <string name="item_shipping_address_payee_name">Jonathan Doe - </string>
+    <string name="item_shipping_address_payee_contact_number">+91 000&#8211;6473&#8211;000</string>
+    <string name="item_shipping_address_payee_address">Room #2 &#8211; 3rd floor, 7619 Bins Manor Stand,\nAlabama &#8211; USA</string>
+
+    <!--  Payment methods item layout string values  -->
+    <string name="item_payment_method_type">Credit Card</string>
+    <string name="item_payment_method_id_or_number">4485127989097123</string>
+    <string name="item_payment_method_extra_info">Secure checkout powered by knox card\n&amp; network security, USA</string>
+
+    <!-- Policies screen string values -->
+    <string name="policies_label">Policies</string>
+    <string name="policies_toolbar_title">Legal Policies</string>
+
+    <!--  Policies item layout string values  -->
+    <string name="item_policies_title">Terms &amp;\nConditions</string>
+    <string name="item_policies_title_short_info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took</string>
+    <string name="dummy_text">When you use our Platform, we collect and store your information which is provided by you from time to time. In general, you can browse the Platform without telling us who you are or revealing any personal information about yourself. Once you give us your personal information, you are not anonymous to us. Where possible, we indicate which fields are required and which fields are optional. You always have the option to not provide information by choosing not to use a particular service, product or feature on the Platform.\n\nWe may track your buying behaviour, preferences, and other information that you choose to provide on our Platform. We use this information to do internal research on our users\' demographics, interests, and behaviour to better understand, protect and serve our users. This information is compiled and analysed on an aggregated basis. This information may include the URL that you just came from (whether this URL is on our Platform or not), which URL you next go to (whether this URL is on our Platform or not), your computer browser information, and your IP address.</string>
+
+    <!--  Notification settings screen string values  -->
+    <string name="notification_settings_screen_toolbar_title">Notification Settings</string>
+    <string name="notification_settings_screen_title">Manage Various\nNotification Settings!</string>
+
+    <!--  Notification settings item layout string values  -->
+    <string name="item_notification_setting_title">Orders</string>
+    <string name="item_notification_setting_info">Get latest updates on your orders.</string>
+
+    <!--  Edit profile screen string values  -->
+    <string name="edit_profile_toolbar_title">Edit Profile</string>
+    <string name="edit_profile_full_name">Jonathan Doe</string>
+    <string name="edit_profile_email">test@hotmail.com</string>
+    <string name="edit_profile_name_label">Name</string>
+    <string name="edit_profile_name_hint">Enter your name</string>
+    <string name="edit_profile_email_label">Email</string>
+    <string name="edit_profile_email_hint">Enter your email address</string>
+    <string name="edit_profile_phone_label">Phone</string>
+    <string name="edit_profile_phone_hint">Enter your phone number</string>
+    <string name="dob_label">Date of birth</string>
+    <string-array name="edit_profile_days_array">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string-array name="edit_profile_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="edit_profile_years_array">
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string name="edit_profile_submit_button_label">Submit</string>
+
+    <!--  Invoice screen string values  -->
+    <string name="invoice_toolbar_title">Invoice</string>
+    <string name="invoice_to">To Henry Collins</string>
+    <string name="invoice_no_label">Invoice No. -</string>
+    <string name="invoice_no">#72891929</string>
+    <string name="invoice_payment_status">Fully Paid</string>
+    <string name="invoice_amount_paid_label">Amount Paid</string>
+    <string name="invoice_payable_amount">$27.75</string>
+    <string name="invoice_issued_on_label">Issued on</string>
+    <string name="invoice_issued_on_date">Jan 10, 2023</string>
+    <string name="invoice_due_on_label">Due on</string>
+    <string name="invoice_due_on_date">Jan 17, 2023</string>
+    <string name="invoice_customer_name">Henry Collins</string>
+    <string name="invoice_customer_email">hc123@hotmail.com</string>
+    <string name="invoice_ordered_items_label">Ordered items</string>
+    <string name="invoice_ordered_item_1_label">Italian Roast Beans - 25lb.</string>
+    <string name="invoice_ordered_item_1_total_price">$15.50</string>
+    <string name="invoice_ordered_item_1_qty_price">2 x $7.75</string>
+    <string name="invoice_ordered_item_2_label">Cheeseburger with garlic - 50lb.</string>
+    <string name="invoice_ordered_item_2_total_price">$10.25</string>
+    <string name="invoice_ordered_item_2_qty_price">1 x $10.25</string>
+    <string name="invoice_subtotal_label">Subtotal</string>
+    <string name="invoice_subtotal_value">$25.75</string>
+    <string name="invoice_vat_label">VAT(0.75 %)</string>
+    <string name="invoice_vat_value">$02.00</string>
+    <string name="invoice_total_payable_label">Total payable</string>
+
+    <!-- Coupons screen string values -->
+    <string name="coupons_toolbar_title">Coupons</string>
+
+    <!--  Coupons item layout string values  -->
+    <string name="item_coupon_title">0% Winter Off</string>
+    <string name="item_coupon_brand">Cargill</string>
+    <string name="item_coupon_valid_up_to">Jan 1 - Jan 14, 2023</string>
+
+    <!--  OTP verification screen string values  -->
+    <string name="otp_verification_screen_title">Verify OTP Sent To\nYour Mobile</string>
+    <string name="otp_verification_title">OTP Verification</string>
+    <string name="otp_verification_hint">Enter 4 Digit OTP code sent to +91 7280000000</string>
+    <string name="otp_verification_question">Didn\'t get OTP code?</string>
+    <string name="otp_verification_resend_code_label">Resend code</string>
+
+    <!--  Splash screen string values  -->
+    <string name="splash_brand_tagline"></string>
+    <string name="splash_app_info">Admin E-Business</string>
+
+    <!--  Product screen string values  -->
+    <string name="product_toolbar_title">Product Details</string>
+    <string name="product_title">Chicken ham burger with tomato and</string>
+    <string name="product_rating">4.9</string>
+    <string name="product_rating_count">(199)</string>
+    <string name="product_badge_label">Non veg</string>
+    <string name="product_ingredients_label">Ingredients</string>
+    <string name="product_price_label">Price</string>
+    <string name="product_original_price">$12.00</string>
+    <string name="product_selling_price">$10.00</string>
+    <string name="product_description_label">Description</string>
+    <string name="product_description">It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.</string>
+    <string name="product_qty">1</string>
+    <string name="product_add_to_cart_label">Add To Cart</string>
+
+
+    <!--  Product ingredients item layout string values  -->
+    <string name="item_product_ingredient_name">Bread</string>
+
+    <!-- Support & help screen string values -->
+    <string name="support_toolbar_title">Support &amp; Help</string>
+
+    <!--  Support carousel item layout string values  -->
+    <string name="item_support_call_support_label">Call Support</string>
+    <string name="item_support_call_support_info">Our one of experts will call you within 5 minutes\nto help you on the fly.</string>
+    <string name="item_support_action_label">Request A Call</string>
+
+    <!-- Customer reviews screen string values -->
+    <string name="customer_reviews_toolbar_title">Customer Reviews</string>
+    <string name="customer_reviews_overall_rating_value">4.9</string>
+    <string name="customer_reviews_slash">/</string>
+    <string name="customer_reviews_total_rating_value">5.0</string>
+    <string name="customer_reviews_total_no_of_ratings">2002 ratings</string>
+    <string name="customer_reviews_five_star_label">5 Star</string>
+    <string name="customer_reviews_four_star_label">4 Star</string>
+    <string name="customer_reviews_three_star_label">3 Star</string>
+    <string name="customer_reviews_two_star_label">2 Star</string>
+    <string name="customer_reviews_one_star_label">1 Star</string>
+    <string name="customer_reviews_give_rating_and_review">Give a rating and review</string>
+    <string name="customer_reviews_label">Customer reviews</string>
+
+    <!-- Customer reviews item layout string values -->
+    <string name="item_customer_review_reviewer_name">Jonathan Doe</string>
+    <string name="item_customer_review_age">2 minutes ago</string>
+    <string name="item_customer_review_message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy.</string>
+
+    <!--  FAQs screen string values  -->
+    <string name="faqs_toolbar_title">FAQ\'s</string>
+    <string name="faqs_screen_title">We have answer for all\nyour questions!</string>
+    <string name="faqs_question">How do i pay my cart total?</string>
+    <string name="faqs_answer">Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</string>
+
+    <!-- Image content description string value -->
+    <string name="image_content_description">Image content description</string>
+    <string name="content_description">Content description</string>
+
+    <!-- Home drawer navigation item string values -->
+    <string name="item_home_drawer_nav_1">Home</string>
+    <string name="item_home_drawer_nav_2">Support &amp; Help</string>
+    <string name="item_home_drawer_nav_3">Legal Policies</string>
+    <string name="item_home_drawer_nav_4">My Chats</string>
+    <string name="item_home_drawer_nav_5">404 Page Not Found</string>
+    <string name="item_home_drawer_nav_6">No Internet</string>
+    <string name="item_home_drawer_nav_7">FAQ\'s</string>
+    <string name="item_home_drawer_nav_8">Login</string>
+
+    <!-- Home bottom navigation item string values -->
+    <string name="item_home_bottom_nav_1">Home</string>
+    <string name="item_home_bottom_nav_2">Cart</string>
+    <string name="item_home_bottom_nav_3">Profile</string>
+    <string name="item_home_bottom_nav_4">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_error_email_empty">insert email</string>
+    <string name="msg_error_password_empty">insert password</string>
+    <string name="msg_error_email_invalid">email invalid</string>
+    <string name="response_firebase_credential_invalid_email_and_password" translatable="false">The supplied auth credential is incorrect, malformed or has expired.</string>
+    <string name="show_user_response_invalid_login">credential invalid</string>
+    <string name="register_name_business">name your business</string>
+    <string name="label_register_name_business">name your business</string>
+    <string name="register_email_duplicated" translatable="false">The email address is already in use by another account.</string>
+    <string name="msg_email_duplicated">email active</string>
+    <string name="acepted_terminos">He leído y comprendido los</string>
+    <string name="terminos_uso">Términos de Uso</string>
+    <string name="email_send_reset">send email your account</string>
+    <string name="send_email_reset_password_fail">not email register</string>
+    <string name="my_profile_exit">exit</string>
+    <string name="email_valid_sucess">email valid</string>
+    <string name="password_valid">password valid</string>
+    <string name="googleWebClientId">175249615113-1v7thmia8af3t4s6v6sd6uhhr7bv3bvi.apps.googleusercontent.com</string>
+    <string name="login_loader">credentials</string>
+    <string name="reset_password_loader">reset password</string>
+    <string name="register_bussines_loader">await, create account</string>
+    <string name="login_password_label_confirm">confirm password</string>
+    <string name="register_password_hint_confirm">confirm password</string>
+    <string name="validate_form_min">min characters is</string>
+    <string name="validate_form_max">el max characters is</string>
+    <string name="validate_form_required">input fiel required</string>
+    <string name="error_login_google">error login google</string>
+    <string name="inputsEquals">equals</string>
+    <string name="inputsNoEquals">no equals</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="terms_conditions">Terms And Conditions</string>
+    <string name="terms_conditions_short">here info short terms and conditions</string>
+    <string name="data_privacy">Data Privacy and Policy</string>
+    <string name="data_privacy_short">here short data privacy in</string>
+    <string name="cancel_returns">Cancell and Returns</string>
+    <string name="cancel_return_short">Cancel here message</string>
+    <string name="email_help">Email Help and Faqs</string>
+    <string name="email_help_short">Email Help and faqs</string>
+
+</resources>
+
