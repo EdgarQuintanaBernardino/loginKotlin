@@ -61,5 +61,9 @@
     <string name="cancel_return_short">Politica de cancelación y reembolsos</string>
     <string name="email_help">Correo de Ayuda y Preguntas Frecuentes</string>
     <string name="email_help_short">Contacto de Ayuda y preguntas frecuentes aqui</string>
+    <string name="confirm_close_session">¿Estás seguro que deseas cerrar sesión?</string>
+    <string name="title_permission_gps">No tienes Gps activo</string>
+    <string name="message_permission_gps">"Necesitas activar el gps para poder continuar "</string>
+    <string name="header_maps">Mi Dirección</string>
 
 </resources>

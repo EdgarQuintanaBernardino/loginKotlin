@@ -12,5 +12,22 @@
         <item name="android:fontFamily">@font/open_sans_medium</item>
         <item name="android:textSize">@dimen/_12ssp</item>
     </style>
+    <!-- Tema personalizado para el AlertDialog -->
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Color de fondo del diálogo -->
+        <item name="android:background">@color/black</item>
+        <!-- Color de los botones -->
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
 
+    <!-- Estilo para el botón positivo -->
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#00FF00</item> <!-- Verde -->
+    </style>
+
+    <!-- Estilo para el botón negativo -->
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#FF0000</item> <!-- Rojo -->
+    </style>
 </resources>

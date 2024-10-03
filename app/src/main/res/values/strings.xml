@@ -519,6 +519,13 @@
     <string name="cancel_return_short">Cancel here message</string>
     <string name="email_help">Email Help and Faqs</string>
     <string name="email_help_short">Email Help and faqs</string>
+    <string name="confirm_close_session">sure are close your session?</string>
+    <string name="title_permission_gps">get Permission Gps</string>
+    <string name="message_permission_gps">get permission for gps</string>
+    <string name="title_activity_search_map">SearchMap</string>
+    <string name="google_api_key_maps" translatable="false">AIzaSyDMmC1Db1WEhSUu4Y8AzpKo-7CzRldESiY</string>
+    <string name="header_maps">my direction</string>
+
 
 </resources>
 
