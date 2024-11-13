@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 
 import com.quics.login.classes.AdaptiveSpacingItemDecoration
 import com.quics.login.home.HomeActivity
@@ -21,6 +22,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.quics.login.R
+import com.quics.login.utils.UserActive
 import kotlin.math.roundToInt
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -31,7 +33,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        changeWelcome(view)
+
         // Getting menu icon image by its id
         val menuIconImage = view.findViewById<ImageView>(R.id.image_menu_icon)
 
@@ -117,12 +119,33 @@ class HomeFragment : Fragment() {
             }
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        changeWelcome(requireView())
+    }
     private fun changeWelcome(v:View){
         val label:TextView=v.findViewById(R.id.text_greeting)
-        var mAuth= FirebaseAuth.getInstance();
+        var image_customer=v.findViewById(R.id.image_customer) as ImageView
+        image_customer.setOnClickListener(){
+            ///open profile
+            replaceFragment(MyProfileFragment())
+            Log.d("HomeFragment","Image clicked")
+        }
+        UserActive().getUserData(requireContext())?.let {
+
+            label.text = it.nombre
+            if(it?.foto != "Invitado"){
+                Glide.with(this) // Usa `this` o el contexto adecuado, como `requireContext()` en un Fragment
+                    .load(it?.foto) // Carga la imagen
+                    .placeholder(R.drawable.ic_person) // Imagen mientras se carga (opcional)
+                    .error(R.drawable.ic_person) // Imagen en caso de error (opcional)
+                    .into(image_customer) // Coloca la imagen en el ImageView
+
+            }
+        }
 
 
-        label.text= mAuth.currentUser?.email.toString()
 
     }
     // Method to initialize the ViewPager2(Main carousel)
@@ -292,4 +315,17 @@ class HomeFragment : Fragment() {
 //                com.intuit.sdp.R.dimen._15sdp).roundToInt(), false)
 //        )
 //    }
+    private fun replaceFragment(fragment: Fragment) {
+        // Getting supportFragmentManager
+        val fragmentManager = parentFragmentManager
+
+        // Beginning transaction
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        // Replacing FrameLayout with a desired Fragment
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+
+        // Committing Fragment transaction
+        fragmentTransaction.commit()
+    }
 }

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".EditProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile_toolbar_title"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:id="@+id/allDisplay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_15sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_customer_avatar"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@color/secondary"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_customer"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:contentDescription="@string/image_content_description"
+                android:src="@drawable/ic_person"
+                app:layout_constraintBottom_toBottomOf="@+id/card_view_customer_avatar"
+                app:layout_constraintEnd_toEndOf="@+id/card_view_customer_avatar"
+                app:layout_constraintStart_toStartOf="@+id/card_view_customer_avatar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardCornerRadius="@dimen/_24sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_view_customer_avatar"
+                app:layout_constraintEnd_toEndOf="@+id/card_view_customer_avatar"
+                app:layout_constraintStart_toEndOf="@+id/card_view_customer_avatar" />
+
+            <ImageView
+                android:id="@+id/image_camera"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:contentDescription="@string/image_content_description"
+                android:src="@drawable/ic_camera_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView5"
+                app:layout_constraintEnd_toEndOf="@+id/cardView5"
+                app:layout_constraintStart_toStartOf="@+id/cardView5"
+                app:layout_constraintTop_toTopOf="@+id/cardView5" />
+
+            <TextView
+                android:id="@+id/text_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/edit_profile_full_name"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintEnd_toEndOf="@+id/card_view_customer_avatar"
+                app:layout_constraintStart_toStartOf="@+id/card_view_customer_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/card_view_customer_avatar" />
+
+            <TextView
+                android:id="@+id/text_customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/edit_profile_email"
+                android:visibility="invisible"
+                android:textColor="@color/textLowContrast"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@+id/text_customer_name"
+                app:layout_constraintStart_toStartOf="@+id/text_customer_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_customer_name" />
+
+            <TextView
+                android:id="@+id/text_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/edit_profile_name_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/text_customer_email"
+                app:layout_constraintStart_toStartOf="@id/text_customer_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_customer_email" />
+
+            <EditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autofillHints="text"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_person_orange"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_medium"
+                android:hint="@string/edit_profile_name_hint"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:textColor="@color/textHighContrast"
+                android:textColorHint="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/text_name_label"
+                app:layout_constraintStart_toStartOf="@id/text_name_label"
+                app:layout_constraintTop_toBottomOf="@+id/text_name_label" />
+
+
+            <TextView
+                android:id="@+id/text_password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/edit_profile_phone_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/edit_text_name"
+                app:layout_constraintStart_toStartOf="@id/edit_text_name"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
+
+            <EditText
+                android:id="@+id/edit_text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:autofillHints="number"
+                android:maxLength="10"
+                android:digits="0123456789"
+                android:background="@drawable/edit_text_background"
+                android:drawableStart="@drawable/ic_calling_orange"
+                android:drawablePadding="@dimen/_15sdp"
+                android:fontFamily="@font/open_sans_medium"
+                android:hint="@string/edit_profile_phone_hint"
+                android:inputType="phone"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:textColor="@color/textHighContrast"
+                android:textColorHint="@color/textLowContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_password_label" />
+
+            <TextView
+                android:id="@+id/dobLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/dob_label"
+                android:textColor="@color/textHighContrast"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/edit_text_phone"
+                app:layout_constraintStart_toStartOf="@id/edit_text_phone"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
+
+
+
+
+            <NumberPicker
+                android:id="@+id/spinner_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/NumberPickerTheme"
+                android:padding="0dp"
+                android:translationY="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/spinner_months"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dobLabel" />
+
+            <NumberPicker
+                android:id="@+id/spinner_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/NumberPickerTheme"
+                android:padding="0dp"
+                android:translationY="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_days"
+                app:layout_constraintEnd_toStartOf="@+id/spinner_years"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinner_days"
+                app:layout_constraintTop_toTopOf="@+id/spinner_days" />
+
+            <NumberPicker
+                android:id="@+id/spinner_years"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/NumberPickerTheme"
+                android:padding="0dp"
+                android:translationY="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner_months"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinner_months"
+                app:layout_constraintTop_toTopOf="@+id/spinner_months" />
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/edit_profile_submit_button_label"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/spinner_days"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_days" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.quics.login.login
 import PopupManager
+import kotlinx.coroutines.tasks.await
+
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -28,8 +30,11 @@ import java.util.UUID
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.firestore.FirebaseFirestore
+import com.quics.login.data.User
 import com.quics.login.home.HomeActivity
-
+import java.util.Date
+import com.quics.login.utils.UserActive
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var etPassword:EditText;
@@ -59,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
             "2" to "NumberPhone",
             "3" to "Facebook"
         )
+
 
     }
     private lateinit var mAuth: FirebaseAuth;
@@ -163,24 +169,8 @@ class LoginActivity : AppCompatActivity() {
         mAuth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-//                    val user = mAuth.currentUser
-//                    user?.let {
-//                        val name = user.displayName
-//                        val email = user.email
-//                        val photoUrl = user.photoUrl
-//                        val emailVerified = user.isEmailVerified
-//                        val uid = user.uid
-//
-//
-//
-//                    }
-                    goHome()
-
-                    popupManager.hidePopup()
-
-
+                    verifyUser();
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
@@ -224,17 +214,94 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+    fun documentExists(collectionName: String, uid: String, callback: (Boolean) -> Unit) {
+        // Referencia al documento en la colección especificada y UID
+        val db = FirebaseFirestore.getInstance()
+
+        val docRef = db.collection(collectionName).document(uid)
+
+        // Intenta obtener el documento
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    document.data?.let {
+                        val userActive = document.toObject(User::class.java)
+                        if (userActive != null) {
+                            UserActive().saveUserData(this,userActive)
+                            callback(true)  // El documento existe
+                        }else{
+                            callback(false) //no podemos parsear el document
+                        }
 
 
 
 
+                    }
+
+                } else {
+                    callback(false) // El documento no existe
+                }
+            }
+            .addOnFailureListener { exception ->
+                println("Error al verificar el documento: ${exception.message}")
+                callback(false) // Maneja el error como no existente si hay un fallo
+            }
+    }
+
+
+    private fun verifyUser() {
+        val collectionRef = FirebaseFirestore.getInstance().collection("usuarios")
+        val uid = mAuth.currentUser?.uid.toString()
+
+        documentExists("usuarios", uid) { exists ->
+            if (exists) {
+                Log.w(TAG, "Usuario existe")
+
+                goHome();
+
+            } else {
+                Log.w(TAG, "Usuario no existe")
+
+                try {
+                    mAuth.currentUser?.let {
+                        val user = User(
+                            "Invitado",
+                            emptyList(),
+                            emptyList(),
+                            it.email.toString(),
+                            Date(),
+                            "Invitado",
+                            it.uid,
+                            emptyList()
+                        )
+                        collectionRef.document(it.uid).set(user);
+                        UserActive().saveUserData(this,user)
+                        goHome();
+                    }
+                }catch (e: Exception) {
+                    popupManager.hidePopup()
+                    Toast.makeText(this, getString(R.string.error_create_user_first), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+
+
+
+    }
 
 
     private fun goHome(){
+
+
+
         reset();
 
         //openActivity(this, "com.example.quics.HomeActivity");
         ///revisar mi tabla de roles TODO
+        //funcion consultar si el usuario esta en la collecion users por medio de su uid
+
+
+
         val intent = Intent(this, HomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         // Starting activity
@@ -259,7 +326,7 @@ private fun showAlert(msg:String){
             btnLogin.isEnabled=false;
             mAuth.signInWithEmailAndPassword(userEmail,password).addOnCompleteListener(this){ task->
                 if(task.isSuccessful){
-                    goHome();
+                    verifyUser();
 
                 }else{
                     val exception = task.exception

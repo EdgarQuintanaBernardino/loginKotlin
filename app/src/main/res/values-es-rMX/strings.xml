@@ -27,6 +27,27 @@
     <string name="register_button_label">Quiero Registrarme</string>
     <string name="register_question_bottom">¿Tienes una cuenta?</string>
     <string name="register_login_here_label">Iniciar sesión</string>
+    <string name="no_internet_toolbar_title">Página Principal</string>
+    <string name="no_internet_label">No hay Internet</string>
+    <string name="no_internet_info">Detectamos que no tienes internet, te invitamos a revisarlo en las configuraciones.</string>
+    <string name="my_profile_toolbar_title">Mi Cuenta</string>
+
+    <string name="my_profile_edit_profile_label">Editar Perfil</string>
+    <string name="my_profile_app_settings_label">"Configuración "</string>
+    <string name="my_profile_my_orders_label">Mis Pedidos</string>
+    <string name="my_profile_my_wallet_label">Monedero</string>
+    <string name="my_profile_change_language_label">Cambiar Lenguaje</string>
+    <string name="my_profile_coupons_label">Cupones</string>
+    <string name="settings_toolbar_title">Configuración</string>
+    <string name="settings_edit_profile_label">Editar Perfil</string>
+    <string name="add_new_address">Agregar Dirección</string>
+    <string name="edit_profile_toolbar_title">Editar Perfil</string>
+    <string name="edit_profile_name_label">Nombre</string>
+    <string name="edit_profile_name_hint">Ingresa tu nombre</string>
+    <string name="edit_profile_phone_label">Teléfono</string>
+    <string name="edit_profile_phone_hint">Ingresa tu número de teléfono</string>
+    <string name="dob_label">Fecha de Nacimiento</string>
+    <string name="edit_profile_submit_button_label">Guardar Perfil</string>
     <string name="splash_app_info">Admin Negocios</string>
     <string name="msg_error_email_empty">campo email vacío</string>
     <string name="msg_error_password_empty">campo contraseña vacío</string>
@@ -65,5 +86,13 @@
     <string name="title_permission_gps">No tienes Gps activo</string>
     <string name="message_permission_gps">"Necesitas activar el gps para poder continuar "</string>
     <string name="header_maps">Mi Dirección</string>
+    <string name="title_gps_active">Activa tu Gps</string>
+    <string name="message_gps_active">Para continuar usando la App es necesario activar la ubicación.</string>
+    <string name="message_btn_gps">Activar Ubicación</string>
+    <string name="go_home_tittle_toolbar">Menú Principal</string>
+    <string name="btn_config_internet">Activa Internet</string>
+    <string name="permissions_gps_header">No tenemos permisos</string>
+    <string name="permissions_gps_message_">Para continuar usando la aplicación, habilita los permisos de ubicación desde la configuración de la app.</string>
+    <string name="error_create_user_first">Error al crear usuario</string>
 
 </resources>

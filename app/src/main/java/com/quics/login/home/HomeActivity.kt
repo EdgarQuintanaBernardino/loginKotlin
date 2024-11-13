@@ -37,7 +37,7 @@ import com.google.android.gms.location.Priority.PRIORITY_HIGH_ACCURACY
 
 //import com.example.fragments.CartFragment
 import com.quics.login.fragments.HomeFragment
-//import com.example.fragments.MyProfileFragment
+import com.quics.login.fragments.MyProfileFragment
 //import com.example.fragments.NotificationsFragment
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -49,6 +49,7 @@ import com.quics.login.classes.ConfirmDialog
 import com.quics.login.classes.DialogLogout
 import com.quics.login.classes.serviceGps
 import com.quics.login.login.LoginActivity
+import com.quics.login.utils.UserActive
 
 
 class HomeActivity : AppCompatActivity() {
@@ -106,7 +107,13 @@ private lateinit var drawerLayout:DrawerLayout;
 
 
         // Calling method to replace FrameLayout with the HomeFragment by default
-        replaceFragment(HomeFragment())
+        if (intent.getStringExtra("OPEN_FRAGMENT") == "MyProfileFragment") {
+            replaceFragment(MyProfileFragment())
+        }else{
+            replaceFragment(HomeFragment())
+        }
+
+
 
         // Getting drawer by its id
         drawerLayout = findViewById(R.id.drawer_layout_home)
@@ -182,10 +189,10 @@ private lateinit var drawerLayout:DrawerLayout;
 //                    // Calling method to replace FrameLayout with the CartFragment
 //                    replaceFragment(CartFragment())
 //                }
-//                R.id.profile -> {
-//                    // Calling method to replace FrameLayout with the MyProfileFragment
-//                    replaceFragment(MyProfileFragment())
-//                }
+                R.id.profile -> {
+                    // Calling method to replace FrameLayout with the MyProfileFragment
+                    replaceFragment(MyProfileFragment())
+                }
 //                R.id.notifications -> {
 //                    // Calling method to replace FrameLayout with the NotificationsFragment
 //                    replaceFragment(NotificationsFragment())
@@ -198,15 +205,15 @@ private lateinit var drawerLayout:DrawerLayout;
         }
     }
     private fun logOut(){
-        mAuth.signOut()
-        goLogin();
+       UserActive().signOut(this);
+
     }
     public override fun onStart(){
         super.onStart()
         var currentUser=mAuth.currentUser
         if(currentUser==null){
             // mAuth.signOut()
-            goLogin();
+           logOut()
         }
         ///activar gps
         var sGps=serviceGps(this);
@@ -221,9 +228,15 @@ private lateinit var drawerLayout:DrawerLayout;
         drawerLayout.closeDrawer(GravityCompat.START)
 
     }else{
-          //  DialogLogout().show(supportFragmentManager, "GAME_DIALOG")
+        if (supportFragmentManager.findFragmentById(R.id.frame_layout) is HomeFragment) {
 
             showCustomDialog()
+       }else{
+            replaceFragment(HomeFragment())
+       }
+          //  DialogLogout().show(supportFragmentManager, "GAME_DIALOG")
+
+
     }
 
     }
@@ -260,17 +273,7 @@ private lateinit var drawerLayout:DrawerLayout;
         dialog.setFunctions(::logOut);
         dialog.show();
     }
-    private fun goLogin(){
-        val intent = Intent(this, LoginActivity::class.java)
 
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-
-        // Iniciar la LoginActivity
-        startActivity(intent)
-
-        // Opcionalmente, finalizar la actividad actual si es necesario
-        finish()
-    }
 
     private fun setDataLocation(){
         var mLocationRequest = LocationRequest.create().apply {

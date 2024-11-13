@@ -29,4 +29,6 @@
     <color name="violetLightest">#108383CE</color>
     <color name="teal">#5CBBA0</color>
     <color name="tealLightest">#105CBBA0</color>
+    <color name="redLight">#10FE4344</color>
+    <color name="redLightText">#FE4344</color>
 </resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    tools:context=".maps.UbicationActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go_home_tittle_toolbar"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:layout_gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_support_icon"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:cardBackgroundColor="#10FE4344"
+        app:cardCornerRadius="@dimen/_90sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_support_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/image_support_icon"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:src="@drawable/ic_destination"
+        app:layout_constraintBottom_toBottomOf="@+id/card_support_icon"
+        app:layout_constraintEnd_toEndOf="@+id/card_support_icon"
+        app:layout_constraintStart_toStartOf="@+id/card_support_icon"
+        app:layout_constraintTop_toTopOf="@+id/card_support_icon"
+        android:contentDescription="@string/image_content_description" />
+
+    <TextView
+        android:id="@+id/text_support_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="@string/title_gps_active"
+        android:textColor="@color/textHighContrast"
+        android:textSize="@dimen/_20ssp"
+        android:layout_marginVertical="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@+id/text_support_info"
+        app:layout_constraintEnd_toEndOf="@+id/card_support_icon"
+        app:layout_constraintStart_toStartOf="@+id/card_support_icon"
+        app:layout_constraintTop_toBottomOf="@+id/card_support_icon" />
+
+    <TextView
+        android:id="@+id/text_support_info"
+        android:layout_width="351dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/open_sans_medium"
+        android:text="@string/message_gps_active"
+        android:textAlignment="center"
+        android:textColor="@color/textLowContrast"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/card_action_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_support_title" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_action_label"
+        android:layout_width="250dp"
+        android:layout_height="59dp"
+        android:minWidth="@dimen/_150sdp"
+        app:cardBackgroundColor="@color/redLight"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_support_info"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/text_support_info"
+        app:layout_constraintTop_toBottomOf="@+id/text_support_info" />
+
+    <TextView
+        android:id="@+id/text_action_label_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_btn_gps"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/redLightText"
+        app:layout_constraintBottom_toBottomOf="@+id/card_action_label"
+        app:layout_constraintEnd_toEndOf="@+id/card_action_label"
+        app:layout_constraintStart_toStartOf="@+id/card_action_label"
+        app:layout_constraintTop_toTopOf="@+id/card_action_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

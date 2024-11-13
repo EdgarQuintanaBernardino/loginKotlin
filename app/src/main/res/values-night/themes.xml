@@ -30,4 +30,13 @@
     <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:textColor">#FF0000</item> <!-- Rojo -->
     </style>
+    <style name="NumberPickerTheme" parent="">
+        <item name="colorAccent">@color/white</item>
+        <!-- To remove divider of the number picker -->
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <!--<item name="colorControlNormal">@color/gray_dark</item>-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
 </resources>

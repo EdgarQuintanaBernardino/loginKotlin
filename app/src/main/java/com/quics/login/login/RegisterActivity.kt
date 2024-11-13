@@ -26,6 +26,9 @@ import com.login.classes.confirm
 import com.login.classes.formRegister
 import com.login.classes.validateInput
 import com.quics.login.R
+import com.quics.login.data.User
+import com.quics.login.utils.UserActive
+import java.util.Date
 import kotlin.properties.Delegates
 
 
@@ -144,7 +147,23 @@ private fun showTerminos(){
         popupManager.showPopup(getString(R.string.register_bussines_loader))
             mAuth.createUserWithEmailAndPassword(etEmail.text.toString(),etPassword.text.toString()).addOnCompleteListener(this){task->
                 if(task.isSuccessful){
-                    goHome()
+                    val collectionRef = FirebaseFirestore.getInstance().collection("usuarios")
+
+                    mAuth.currentUser?.let {
+                        val user = User(
+                            "Invitado",
+                            emptyList(),
+                            emptyList(),
+                            it.email.toString(),
+                            Date(),
+                            "Invitado",
+                            it.uid,
+                            emptyList()
+                        )
+                        collectionRef.document(it.uid).set(user);
+                        UserActive().saveUserData(this, user)
+                        goHome();
+                    }
                 }else{
                     val exception = task.exception
                     val msn= exception?.message

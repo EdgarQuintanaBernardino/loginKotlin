@@ -65,5 +65,11 @@ dependencies {
     implementation (libs.sdp.android)
     implementation (libs.ssp.android)
     implementation (libs.play.services.location)
+    implementation (libs.lottie)
+    implementation ("com.google.android.libraries.places:places:2.6.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation(libs.firebase.storage.ktx)
+    implementation (libs.glide) // Asegúrate de usar la última versión
+    annotationProcessor (libs.compiler)
 
 }

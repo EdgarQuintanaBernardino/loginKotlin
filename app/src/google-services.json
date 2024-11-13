@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "175249615113",
     "project_id": "delivery-3e3dd",
-    "storage_bucket": "delivery-3e3dd.appspot.com"
+    "storage_bucket": "delivery-3e3dd.firebasestorage.app"
   },
   "client": [
     {
@@ -50,6 +50,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "175249615113-h72lej2i7usu6qgvbtsmgo2hp9ingtcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quics.login",
+            "certificate_hash": "8534be7ac3fca0aa19cbfca61e6fca7563dcae68"
+          }
+        },
         {
           "client_id": "175249615113-3kr3lubvr4fevjekjr9ttelp17oo7il3.apps.googleusercontent.com",
           "client_type": 3

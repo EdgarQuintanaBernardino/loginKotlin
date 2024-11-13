@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_address"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_marginTop="16dp"
+
+        android:background="@drawable/bg_checkout_address_and_payment_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_address_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_grey_full_rounded"
+        app:layout_constraintStart_toStartOf="@+id/view_address"
+        app:layout_constraintTop_toTopOf="@+id/view_address" />
+
+    <ImageView
+        android:id="@+id/trash_address"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_trash_red"
+        app:layout_constraintBottom_toBottomOf="@+id/view_address_icon"
+        app:layout_constraintEnd_toEndOf="@+id/view_address_icon"
+        app:layout_constraintStart_toStartOf="@+id/view_address_icon"
+        app:layout_constraintTop_toTopOf="@+id/view_address_icon"
+        android:contentDescription="@string/image_content_description" />
+
+    <View
+        android:id="@+id/view_update_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_grey_full_rounded"
+        app:layout_constraintStart_toStartOf="@+id/view_address"
+        app:layout_constraintTop_toTopOf="@+id/view_address" />
+
+    <ImageView
+        android:id="@+id/view_update_address"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_pencil_black"
+        app:tint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@+id/view_update_icon"
+        app:layout_constraintEnd_toEndOf="@+id/view_update_icon"
+        app:layout_constraintStart_toStartOf="@+id/view_update_icon"
+        app:layout_constraintTop_toTopOf="@+id/view_update_icon"
+        android:contentDescription="@string/image_content_description" />
+    <TextView
+        android:id="@+id/text_address_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/item_shipping_address_type"
+        android:textColor="@color/textHighContrast"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_address_icon"
+        app:layout_constraintStart_toEndOf="@+id/view_address_icon"
+        app:layout_constraintTop_toTopOf="@+id/view_address_icon"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <ImageView
+        android:id="@+id/image_checkmark"
+        android:visibility="gone"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_check_circle_orange"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_address_icon"
+        app:layout_constraintEnd_toEndOf="@+id/view_address"
+        app:layout_constraintTop_toTopOf="@+id/view_address_icon"
+        android:contentDescription="@string/image_content_description" />
+
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:fontFamily="@font/open_sans_medium"
+        android:text="@string/item_shipping_address_payee_address"
+        android:textColor="@color/textLowContrast"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_address"
+        app:layout_constraintStart_toStartOf="@+id/view_address_icon"
+        app:layout_constraintEnd_toEndOf="@+id/view_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

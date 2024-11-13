@@ -525,6 +525,14 @@
     <string name="title_activity_search_map">SearchMap</string>
     <string name="google_api_key_maps" translatable="false">AIzaSyDMmC1Db1WEhSUu4Y8AzpKo-7CzRldESiY</string>
     <string name="header_maps">my direction</string>
+    <string name="title_gps_active">active gps</string>
+    <string name="message_gps_active">active gps now</string>
+    <string name="message_btn_gps">active</string>
+    <string name="go_home_tittle_toolbar">go home</string>
+    <string name="btn_config_internet">Active Internet</string>
+    <string name="permissions_gps_header">i have permissions for gps</string>
+    <string name="permissions_gps_message_">no</string>
+    <string name="error_create_user_first">error create user</string>
 
 
 </resources>

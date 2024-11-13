@@ -51,7 +51,7 @@
                 android:fontFamily="@font/open_sans_semi_bold"
                 android:text="@string/home_greeting"
                 android:textColor="@color/textHighContrast"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="@+id/card_menu_icon"
                 app:layout_constraintEnd_toStartOf="@+id/card_customer_image"
                 app:layout_constraintStart_toEndOf="@+id/card_menu_icon"
