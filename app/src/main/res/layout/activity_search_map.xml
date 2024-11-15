@@ -76,6 +76,7 @@ android:id="@+id/cardview"
         android:layout_height="132dp"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@color/secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -86,16 +87,18 @@ android:id="@+id/cardview"
             android:layout_height="46dp"
             android:scrollbars="vertical"
             android:maxLines="2"
+
             android:textAlignment="center"
             android:paddingHorizontal="@dimen/_10sdp"
             android:text=""
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/saveDirection"
             android:layout_width="303dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:backgroundTint="@color/orange"
             android:text="Guardar Dirección" />
     </LinearLayout>
 

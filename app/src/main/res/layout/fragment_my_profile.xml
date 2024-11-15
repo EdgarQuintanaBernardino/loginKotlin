@@ -39,82 +39,17 @@
             android:layout_height="0dp"
             android:padding="@dimen/_15sdp">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/shapeable_image_header"
-                android:layout_width="372dp"
-                android:layout_height="106dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/roundedHeaderImage" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_customer_avatar"
-                android:layout_width="77dp"
-                android:layout_height="92dp"
-                app:cardBackgroundColor="@color/primary"
-                app:cardCornerRadius="@dimen/_15sdp"
-                app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/shapeable_image_header"
-                app:layout_constraintStart_toStartOf="@+id/shapeable_image_header"
-                app:layout_constraintTop_toTopOf="@+id/shapeable_image_header"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageView
-                android:id="@+id/image_customer"
-                android:layout_width="@dimen/_54sdp"
-                android:layout_height="@dimen/_54sdp"
-                android:contentDescription="@string/image_content_description"
-                android:src="@drawable/ic_person"
-
-                app:layout_constraintBottom_toBottomOf="@+id/card_customer_avatar"
-                app:layout_constraintEnd_toStartOf="@+id/text_customer_name"
-                app:layout_constraintStart_toStartOf="@+id/shapeable_image_header"
-                app:layout_constraintTop_toTopOf="@+id/card_customer_avatar" />
-
-            <TextView
-                android:id="@+id/text_customer_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="@string/my_profile_full_name"
-                android:textColor="@color/textHighContrast"
-                android:textSize="@dimen/_16ssp"
-                app:layout_constraintBottom_toTopOf="@+id/text_customer_email"
-                app:layout_constraintStart_toEndOf="@+id/card_customer_avatar"
-                app:layout_constraintTop_toTopOf="@+id/card_customer_avatar"
-                app:layout_constraintVertical_chainStyle="packed" />
-
-            <TextView
-                android:id="@+id/text_customer_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_medium"
-                android:text="@string/my_profile_email"
-                android:textColor="@color/textHighContrast"
-                android:textSize="@dimen/_12ssp"
-                android:visibility="invisible"
-                android:scrollbars="vertical"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="@+id/card_customer_avatar"
-                app:layout_constraintStart_toStartOf="@+id/text_customer_name"
-                app:layout_constraintTop_toBottomOf="@+id/text_customer_name" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_link_1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_56sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_15sdp"
                 app:cardBackgroundColor="@color/secondary"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/shapeable_image_header" />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <androidx.cardview.widget.CardView

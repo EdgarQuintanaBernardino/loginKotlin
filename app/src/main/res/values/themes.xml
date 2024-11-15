@@ -51,6 +51,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/_20sdp</item>
         <item name="color">@color/white</item>
+        <item name="android:background">@color/secondary</item>
     </style>
 
     <style name="roundedRecentTransactionImage" parent="">

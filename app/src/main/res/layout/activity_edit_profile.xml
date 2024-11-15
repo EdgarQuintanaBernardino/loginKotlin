@@ -28,13 +28,14 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
+        android:id="@+id/allDisplay"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="none"
-        android:id="@+id/allDisplay"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_16sdp"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,20 +102,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/card_view_customer_avatar" />
 
             <TextView
-                android:id="@+id/text_customer_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:fontFamily="@font/open_sans_regular"
-                android:text="@string/edit_profile_email"
-                android:visibility="invisible"
-                android:textColor="@color/textLowContrast"
-                android:textSize="@dimen/_14ssp"
-                app:layout_constraintEnd_toEndOf="@+id/text_customer_name"
-                app:layout_constraintStart_toStartOf="@+id/text_customer_name"
-                app:layout_constraintTop_toBottomOf="@+id/text_customer_name" />
-
-            <TextView
                 android:id="@+id/text_name_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -123,9 +110,9 @@
                 android:text="@string/edit_profile_name_label"
                 android:textColor="@color/textHighContrast"
                 android:textSize="@dimen/_12ssp"
-                app:layout_constraintEnd_toEndOf="@id/text_customer_email"
-                app:layout_constraintStart_toStartOf="@id/text_customer_email"
-                app:layout_constraintTop_toBottomOf="@+id/text_customer_email" />
+                app:layout_constraintEnd_toEndOf="@id/text_customer_name"
+                app:layout_constraintStart_toStartOf="@id/text_customer_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_customer_name" />
 
             <EditText
                 android:id="@+id/edit_text_name"
@@ -167,14 +154,14 @@
                 android:layout_height="@dimen/_45sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:autofillHints="number"
-                android:maxLength="10"
-                android:digits="0123456789"
                 android:background="@drawable/edit_text_background"
+                android:digits="0123456789"
                 android:drawableStart="@drawable/ic_calling_orange"
                 android:drawablePadding="@dimen/_15sdp"
                 android:fontFamily="@font/open_sans_medium"
                 android:hint="@string/edit_profile_phone_hint"
                 android:inputType="phone"
+                android:maxLength="10"
                 android:paddingHorizontal="@dimen/_15sdp"
                 android:textColor="@color/textHighContrast"
                 android:textColorHint="@color/textLowContrast"
@@ -196,14 +183,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
 
 
-
-
             <NumberPicker
                 android:id="@+id/spinner_days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/NumberPickerTheme"
                 android:padding="0dp"
+                android:theme="@style/NumberPickerTheme"
                 android:translationY="0dp"
                 app:layout_constraintEnd_toStartOf="@+id/spinner_months"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -215,8 +200,8 @@
                 android:id="@+id/spinner_months"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/NumberPickerTheme"
                 android:padding="0dp"
+                android:theme="@style/NumberPickerTheme"
                 android:translationY="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/spinner_days"
                 app:layout_constraintEnd_toStartOf="@+id/spinner_years"
@@ -228,8 +213,8 @@
                 android:id="@+id/spinner_years"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:theme="@style/NumberPickerTheme"
                 android:padding="0dp"
+                android:theme="@style/NumberPickerTheme"
                 android:translationY="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/spinner_months"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -237,23 +222,26 @@
                 app:layout_constraintStart_toEndOf="@+id/spinner_months"
                 app:layout_constraintTop_toTopOf="@+id/spinner_months" />
 
-            <Button
-                android:id="@+id/button_submit"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_52sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:backgroundTint="@color/orange"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="@string/edit_profile_submit_button_label"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14ssp"
-                app:cornerRadius="@dimen/_10sdp"
-                app:layout_constraintStart_toStartOf="@id/spinner_days"
-                app:layout_constraintTop_toBottomOf="@+id/spinner_days" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/edit_profile_submit_button_label"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

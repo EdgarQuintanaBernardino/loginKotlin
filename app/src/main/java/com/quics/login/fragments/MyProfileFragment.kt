@@ -31,9 +31,7 @@ class MyProfileFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit private var textEmail: TextView;
-    lateinit private var textName: TextView;
-    lateinit private var image_customer:ImageView;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -66,9 +64,7 @@ class MyProfileFragment : Fragment() {
         val cardLink7 = view.findViewById<CardView>(R.id.card_link_7)
         val cardLink8 = view.findViewById<CardView>(R.id.card_link_8)
         val cadDirecciones=view.findViewById<CardView>(R.id.card_direcciones)
-        textEmail = view.findViewById<TextView>(R.id.text_customer_email) as TextView
-        textName = view.findViewById<TextView>(R.id.text_customer_name) as TextView
-        image_customer = view.findViewById(R.id.image_customer)
+
 
 
         val toolbar =  requireView().findViewById<Toolbar>(R.id.toolbar)
@@ -141,18 +137,7 @@ class MyProfileFragment : Fragment() {
 
     private fun updateUser(){
 
-        UserActive().getUserData(requireContext())?.let {
-            textEmail.text = it.email
-            textName.text = it.nombre
-            if(it?.foto != "Invitado"){
-                Glide.with(this) // Usa `this` o el contexto adecuado, como `requireContext()` en un Fragment
-                    .load(it?.foto) // Carga la imagen
-                    .placeholder(R.drawable.ic_person) // Imagen mientras se carga (opcional)
-                    .error(R.drawable.ic_person) // Imagen en caso de error (opcional)
-                    .into(image_customer) // Coloca la imagen en el ImageView
 
-            }
-        }
 
     }
     // Method to open specified activity

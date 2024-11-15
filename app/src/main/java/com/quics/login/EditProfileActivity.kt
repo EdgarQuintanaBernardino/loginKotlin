@@ -42,7 +42,7 @@ import com.bumptech.glide.Glide
 class EditProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
    private lateinit var text_customer_name: TextView;
-    private lateinit var text_customer_email: TextView;
+
     private lateinit var monthPicker: NumberPicker;
     private lateinit var yearPicker: NumberPicker;
     private lateinit var dayPicker: NumberPicker;
@@ -70,7 +70,6 @@ private val IMAGE_PERMISSION_CODE = 1001
          //setSupportActionBar(toolbar)
         // Setting click listener
         text_customer_name =findViewById(R.id.text_customer_name)
-        text_customer_email=findViewById(R.id.text_customer_email)
         edit_text_phone=findViewById(R.id.edit_text_phone)
         edit_text_name=findViewById(R.id.edit_text_name)
         userActive=UserActive()
@@ -155,7 +154,7 @@ private val IMAGE_PERMISSION_CODE = 1001
         }
         userActive.getUserData(this).let {
             text_customer_name.text=it?.nombre
-            text_customer_email.text=it?.email
+
             if((it?.telefonos?.size ?: 0) > 0){
                 edit_text_phone.text= it?.telefonos?.get(0).toString();
             }
